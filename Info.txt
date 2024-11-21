@@ -1,0 +1,9 @@
+Color Used : 
+#4169e1
+#89CFF0
+#f3fafd
+
+Font Used:
+Robota
+Impact
+Cascadia Code
