@@ -1,4 +1,4 @@
-module com.example.rangpurcomputersoftwarejavafx {
+module main.rangpurcomputersoftwarejavafx {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -11,6 +11,6 @@ module com.example.rangpurcomputersoftwarejavafx {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens com.example.rangpurcomputersoftwarejavafx to javafx.fxml;
-    exports com.example.rangpurcomputersoftwarejavafx;
+    opens main.rangpurcomputersoftwarejavafx to javafx.fxml;
+    exports main.rangpurcomputersoftwarejavafx;
 }
