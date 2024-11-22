@@ -1,14 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Authentication"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="1080.0" prefWidth="1920.0">
+         <children>
+            <AnchorPane prefHeight="1080.0" prefWidth="960.0" styleClass="gradient" stylesheets="@AuthenticationStyle.css">
+               <children>
+                  <ImageView fitHeight="600.0" fitWidth="600.0" layoutX="180.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="960.0" prefHeight="1080.0" prefWidth="960.0" styleClass="white-form" stylesheets="@AuthenticationStyle.css">
+               <children>
+                  <Label layoutX="300.0" layoutY="60.0" text="Admin Login" textFill="ROYALBLUE">
+                     <font>
+                        <Font name="Impact" size="64.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="130.0" layoutY="180.0" prefHeight="800.0" prefWidth="700.0" styleClass="right-back" stylesheets="@AuthenticationStyle.css">
+                     <children>
+                        <Label layoutX="180.0" layoutY="40.0" text="Welcome Back" textFill="ROYALBLUE">
+                           <font>
+                              <Font name="Roboto Black" size="48.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="195.0" layoutY="85.0" text="Login to your account" textFill="ROYALBLUE">
+                           <font>
+                              <Font name="Roboto Medium" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="80.0" layoutY="200.0" text="Admin Username" textFill="ROYALBLUE">
+                           <font>
+                              <Font name="Cascadia Code Regular" size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="70.0" layoutY="250.0" prefHeight="70.0" prefWidth="550.0" promptText="Example : admin11" styleClass="textfield" stylesheets="@AuthenticationStyle.css">
+                           <font>
+                              <Font name="Roboto Medium" size="24.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="80.0" layoutY="350.0" text="Password" textFill="ROYALBLUE">
+                           <font>
+                              <Font name="Cascadia Code Regular" size="36.0" />
+                           </font>
+                        </Label>
+                        <PasswordField layoutX="70.0" layoutY="400.0" prefHeight="70.0" prefWidth="550.0" promptText="Enter your password" styleClass="textfield" stylesheets="@AuthenticationStyle.css">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </PasswordField>
+                        <Hyperlink layoutX="400.0" layoutY="500.0" text="Forgot Password?" textFill="ROYALBLUE">
+                           <font>
+                              <Font name="Roboto Medium" size="24.0" />
+                           </font>
+                        </Hyperlink>
+                        <Button layoutX="200.0" layoutY="600.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="300.0" styleClass="login-btn" stylesheets="@AuthenticationStyle.css" text="Login">
+                           <font>
+                              <Font name="Roboto Black" size="36.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

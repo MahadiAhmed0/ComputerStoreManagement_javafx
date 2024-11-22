@@ -1,0 +1,83 @@
+.gradient{
+    -fx-background-color: linear-gradient(to right, #4169e1, #89CFF0);
+}
+.right-back{
+    -fx-background-color:#f3fafd;
+}
+.white-form{
+    -fx-background-color: #fff;
+}
+
+.head-label{
+    -fx-border-color: #286155;
+    -fx-border-width: 0 0 0 3px;
+    -fx-padding: 0 0 0 5px;
+}
+
+.login-btn{
+    -fx-background-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 36px;
+    -fx-font-family: "Roboto Black";
+}
+
+.login-btn:hover {
+    -fx-background-color: linear-gradient(to left, #4169e1, #89CFF0);
+}
+
+.create-btn{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-border-color: #fff;
+    -fx-border-width: 1px;
+}
+
+.create-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.3); /* White with 50% transparency */
+}
+
+
+.create-btn:focused{
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+
+/* Custom checkbox styling for JavaFX */
+.custom-checkbox .box {
+    -fx-border-color: #a084ff; /* Initial border color */
+    -fx-border-width: 2; /* Border thickness */
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-min-width: 16px; /* Fixed size */
+    -fx-min-height: 16px;
+    -fx-border-radius: 3; /* Rounded corners */
+    -fx-padding: 0; /* Consistent padding */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+}
+
+.custom-checkbox:selected .box {
+    -fx-background-color: #5c32c9; /* Change to solid color when selected */
+    -fx-border-color: #5c32c9; /* Match the border color */
+    -fx-min-width: 16px; /* Maintain the size */
+    -fx-min-height: 16px;
+    -fx-padding: 0; /* Consistent padding to avoid shrinking */
+}
+
+.custom-checkbox:selected .mark {
+    -fx-background-color: white; /* Checkmark color */
+    -fx-shape: "M 0 0 L 4 4 L 8 0"; /* Checkmark shape */
+    -fx-padding: 3; /* Adjust padding for the mark */
+}
+
+.textfield {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
+    -fx-border-width: 1px;
+}
+
+.textfield:focused {
+    -fx-border-width: 2px;
+}
+
