@@ -7,3 +7,6 @@ Font Used:
 Robota
 Impact
 Cascadia Code
+
+Database Table:
+Run the "Resouce Files\Database Design\RCC.session" to get the tables and attributes.
