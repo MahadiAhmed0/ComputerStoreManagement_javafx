@@ -1,5 +1,5 @@
 .gradient{
-    -fx-background-color: linear-gradient(to right, #4169e1, #89CFF0);
+    -fx-background-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
 }
 .right-back{
     -fx-background-color:#f3fafd;
