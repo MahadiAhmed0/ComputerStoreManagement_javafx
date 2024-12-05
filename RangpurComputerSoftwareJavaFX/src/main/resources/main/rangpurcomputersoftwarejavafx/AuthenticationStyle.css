@@ -7,6 +7,15 @@
 .white-form{
     -fx-background-color: #fff;
 }
+.split-pane{
+    -fx-background-color: transparent; /* Makes the divider invisible */
+    -fx-padding: 0; /* Removes extra padding around the divider */
+}
+.split-pane > .split-pane-divider {
+    -fx-background-color: transparent; /* Makes the divider invisible */
+    -fx-padding: 0; /* Removes extra padding around the divider */
+}
+
 
 .head-label{
     -fx-border-color: #286155;
@@ -19,7 +28,7 @@
     -fx-background-radius: 5px;
     -fx-cursor: hand;
     -fx-text-fill: #fff;
-    -fx-font-size: 36px;
+    -fx-font-size: 14px;
     -fx-font-family: "Roboto Black";
 }
 
