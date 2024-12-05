@@ -65,7 +65,7 @@ public class AuthenticationController implements Initializable {
 
             slider2.play();
         }
-        
+
         if (event.getSource() == forgetPasswordLink) {
             slider.play();
         }
