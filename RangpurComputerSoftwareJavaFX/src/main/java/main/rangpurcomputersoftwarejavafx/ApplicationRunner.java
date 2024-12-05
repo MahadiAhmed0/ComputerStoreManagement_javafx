@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -16,6 +17,9 @@ public class ApplicationRunner extends Application {
         Scene scene = new Scene(root);
 
         stage.setTitle("Rangpur Computer Center");
+        stage.setResizable(true);
+        //stage.initStyle(StageStyle.TRANSPARENT);
+
 
         stage.setMaxWidth(900);
         stage.setMaxHeight(700);

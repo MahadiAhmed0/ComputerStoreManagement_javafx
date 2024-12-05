@@ -31,10 +31,19 @@
     -fx-font-size: 14px;
     -fx-font-family: "Roboto Black";
 }
-
+.transparent{
+    -fx-background-color: transparent;
+}
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);
+}
 .login-btn:hover {
     -fx-background-color: linear-gradient(to left, #4169e1, #89CFF0);
 }
+.ash-color{
+    -fx-background-color: #2b2b2b;
+}
+
 
 .create-btn{
     -fx-background-color: transparent;
