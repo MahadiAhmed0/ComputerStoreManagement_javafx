@@ -16,7 +16,12 @@ public class ApplicationRunner extends Application {
         Scene scene = new Scene(root);
 
         stage.setTitle("Rangpur Computer Center");
-        stage.setFullScreen(true);
+
+        stage.setMaxWidth(900);
+        stage.setMaxHeight(700);
+
+        stage.setMinWidth(800);
+        stage.setMinHeight(600);
 
         stage.setScene(scene);
         stage.show();
