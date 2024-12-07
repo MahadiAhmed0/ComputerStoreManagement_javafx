@@ -10,6 +10,7 @@ module main.rangpurcomputersoftwarejavafx {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
     opens main.rangpurcomputersoftwarejavafx to javafx.fxml;
     exports main.rangpurcomputersoftwarejavafx;

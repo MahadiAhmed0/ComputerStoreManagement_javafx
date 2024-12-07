@@ -31,6 +31,12 @@
     -fx-font-size: 14px;
     -fx-font-family: "Roboto Black";
 }
+.logo{
+    -fx-background-image: url(Logo.png);
+    -fx-background-size: contain;
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: center;
+}
 .transparent{
     -fx-background-color: transparent;
 }
@@ -97,5 +103,17 @@
 
 .textfield:focused {
     -fx-border-width: 2px;
+}
+
+.titlebar-button {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
+    -fx-border-width: 1px;
+    -fx-text-fill: linear-gradient(to bottom right, #4169e1, #89CFF0);;
+}
+
+.titlebar-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
+    -fx-text-fill: white;
 }
 
