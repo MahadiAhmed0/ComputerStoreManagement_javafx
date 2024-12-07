@@ -105,3 +105,15 @@
     -fx-border-width: 2px;
 }
 
+.titlebar-button {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
+    -fx-border-width: 1px;
+    -fx-text-fill: linear-gradient(to bottom right, #4169e1, #89CFF0);;
+}
+
+.titlebar-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
+    -fx-text-fill: white;
+}
+

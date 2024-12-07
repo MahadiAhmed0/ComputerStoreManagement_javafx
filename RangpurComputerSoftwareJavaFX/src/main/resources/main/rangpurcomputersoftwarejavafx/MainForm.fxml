@@ -109,7 +109,25 @@
                            </styleClass>
                         </AnchorPane>
                      </children></AnchorPane>
-                  <AnchorPane prefHeight="30.0" prefWidth="1120.0" styleClass="blue-color" stylesheets="@MainFormStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <AnchorPane prefHeight="30.0" prefWidth="1120.0" styleClass="blue-color" stylesheets="@MainFormStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button layoutX="1093.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="X" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="4.0">
+                           <font>
+                              <Font name="Roboto Black" size="10.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="1061.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="M" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="34.0">
+                           <font>
+                              <Font name="Roboto Black" size="10.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="1033.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="_" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="66.0">
+                           <font>
+                              <Font name="Roboto Black" size="10.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
         </items>
