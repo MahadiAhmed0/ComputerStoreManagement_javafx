@@ -1,0 +1,73 @@
+.gradient{
+    -fx-background-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
+}
+
+.blue-color{
+    -fx-background-color: #89CFF0;
+}
+
+.split-pane{
+    -fx-background-color: transparent; /* Makes the divider invisible */
+    -fx-padding: 0; /* Removes extra padding around the divider */
+}
+.split-pane > .split-pane-divider {
+    -fx-background-color: transparent; /* Makes the divider invisible */
+    -fx-padding: 0; /* Removes extra padding around the divider */
+}
+.normal-btn{
+    -fx-background-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+}
+.ash-color{
+    -fx-background-color: #2b2b2b;
+}
+
+.logo{
+    -fx-background-image: url(Logo.png);
+    -fx-background-size: contain;
+    -fx-background-repeat:no-repeat;
+    -fx-background-position: center;
+}
+.white-form{
+    -fx-background-color: #fff;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent; /* Gradient */
+    -fx-background-insets: 0;  /* Removes any padding around the background */
+    -fx-background-radius: 10px;  /* Rounded corners for the ScrollPane */
+    -fx-border-radius: 10px; /* Rounded corners for the border */
+    -fx-border-color: transparent; /* Border color */
+    -fx-border-width: 1px; /* Border width */
+}
+
+/* Customize horizontal scrollbar */
+.scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: transparent; /* Make background of scrollbar transparent */
+    -fx-border-color: transparent; /* Hide border of scrollbar */
+    -fx-background-insets: 0, 0, 0; /* Remove inset around scrollbar */
+    -fx-border-width: 0; /* Remove border around scrollbar */
+}
+
+.scroll-pane .scroll-bar:horizontal .thumb {
+    -fx-background-color: #4169e1;  /* Thumb color */
+    -fx-background-radius: 5px; /* Rounded corners for thumb */
+}
+
+.scroll-pane .scroll-bar:horizontal .track {
+    -fx-background-color: #89CFF0; /* Track color */
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 1), 15, 0, 0, 0);
+}
+
+.radius-fixed-corner{
+    -fx-background-radius: 0 0 15px 15px; /* Only the bottom corners will be rounded */
+}
+.radius{
+     -fx-background-radius: 10px;
+}
+
