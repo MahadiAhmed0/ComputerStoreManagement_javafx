@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -12,7 +13,7 @@ import java.io.IOException;
 public class ApplicationRunner extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Authentication.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("MainForm.fxml"));
 
         Scene scene = new Scene(root);
 
@@ -20,10 +21,14 @@ public class ApplicationRunner extends Application {
         stage.setResizable(true);
         //stage.initStyle(StageStyle.TRANSPARENT);
 
+        //stage.setFullScreen(true);
+        //stage.setMaxWidth(900);
+        //stage.setMaxHeight(700);
+        TableView<?> tableView = (TableView<?>) root.lookup("#tableView"); // Replace "#tableView" with the actual fx:id
 
-        stage.setMaxWidth(900);
-        stage.setMaxHeight(700);
-
+        if (tableView != null) {
+            tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        }
         stage.setMinWidth(800);
         stage.setMinHeight(600);
 
