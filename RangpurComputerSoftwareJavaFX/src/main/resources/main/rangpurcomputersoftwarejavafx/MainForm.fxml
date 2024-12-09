@@ -171,28 +171,42 @@
                   </AnchorPane>
                   <AnchorPane layoutX="260.0" layoutY="160.0" prefHeight="900.0" prefWidth="1120.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
                      <children>
-                        <SplitPane dividerPositions="0.15" prefHeight="900.0" prefWidth="1120.0" stylesheets="@MainFormStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <SplitPane dividerPositions="0.15" prefHeight="870.0" prefWidth="1120.0" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <items>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="light-ash-color" stylesheets="@MainFormStyle.css">
                                  <children>
-                                    <VBox layoutX="34.0" layoutY="65.0" prefHeight="900.0" prefWidth="168.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <VBox maxHeight="1080.0" maxWidth="230.4" prefHeight="871.0" prefWidth="168.0" styleClass="white-form" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <Button mnemonicParsing="false" prefHeight="300.0" prefWidth="168.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="ADD">
+                                          <Button maxHeight="350.0" maxWidth="400.0" mnemonicParsing="false" prefHeight="290.0" prefWidth="168.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="ADD" VBox.vgrow="ALWAYS">
                                              <font>
-                                                <Font name="Impact" size="48.0" />
+                                                <Font name="Impact" size="36.0" />
                                              </font>
                                           </Button>
-                                          <Button mnemonicParsing="false" prefHeight="300.0" prefWidth="168.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="UPDATE">
+                                          <Button maxHeight="350.0" maxWidth="400.0" mnemonicParsing="false" prefHeight="290.0" prefWidth="168.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="UPDATE" VBox.vgrow="ALWAYS">
                                              <font>
-                                                <Font size="48.0" />
+                                                <Font name="Impact" size="36.0" />
                                              </font>
                                           </Button>
-                                          <Button mnemonicParsing="false" prefHeight="300.0" prefWidth="168.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="Button" />
+                                          <Button maxHeight="350.0" maxWidth="400.0" mnemonicParsing="false" prefHeight="290.0" prefWidth="168.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="DELETE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="Impact" size="36.0" />
+                                             </font>
+                                          </Button>
                                        </children>
                                     </VBox>
                                  </children>
                               </AnchorPane>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="white-form" stylesheets="@MainFormStyle.css" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="white-form" stylesheets="@MainFormStyle.css">
+                                 <children>
+                                    <AnchorPane layoutX="30.0" layoutY="30.0" prefHeight="810.0" prefWidth="892.0" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                       <styleClass>
+                                          <String fx:value="white-form" />
+                                          <String fx:value="radius-fixed-corner" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
                           </items>
                            <styleClass>
                               <String fx:value="split-pane" />

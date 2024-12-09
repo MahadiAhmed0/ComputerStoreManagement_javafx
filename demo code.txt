@@ -1,0 +1,46 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+public class ButtonToggleApp extends Application {
+
+    private Button activeButton = null; // Tracks the currently active button
+
+    @Override
+    public void start(Stage primaryStage) {
+        Button button1 = createButton("Button 1");
+        Button button2 = createButton("Button 2");
+        Button button3 = createButton("Button 3");
+
+        HBox root = new HBox(10, button1, button2, button3);
+        root.setStyle("-fx-padding: 20; -fx-alignment: center;");
+
+        Scene scene = new Scene(root, 400, 200);
+        scene.getStylesheets().add("style.css"); // Add your CSS file if needed
+
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Button Toggle Example");
+        primaryStage.show();
+    }
+
+    private Button createButton(String text) {
+        Button button = new Button(text);
+        button.getStyleClass().add("pressed-button");
+
+        button.setOnAction(event -> {
+            if (activeButton != null) {
+                activeButton.getStyleClass().remove("active"); // Remove active style from the previously active button
+            }
+
+            button.getStyleClass().add("active"); // Add active style to the clicked button
+            activeButton = button; // Update the active button reference
+        });
+
+        return button;
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
