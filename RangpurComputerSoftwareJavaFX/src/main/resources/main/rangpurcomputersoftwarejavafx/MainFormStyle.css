@@ -91,6 +91,10 @@
     -fx-text-fill: white;
 }
 
+.transparent{
+    -fx-background-color: transparent;
+}
+
 .table-view {
     -fx-background-color: #ffffff; /* White background for visibility */
     -fx-padding: 5;
