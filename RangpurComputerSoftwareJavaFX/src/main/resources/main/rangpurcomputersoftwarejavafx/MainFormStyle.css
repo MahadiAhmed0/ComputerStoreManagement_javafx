@@ -28,6 +28,10 @@
     -fx-background-color: #2b2b2b;
 }
 
+.light-ash-color{
+    -fx-background-color: #b9b8b8;
+}
+
 .logo{
     -fx-background-image: url(Logo.png);
     -fx-background-size: contain;

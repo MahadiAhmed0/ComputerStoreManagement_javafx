@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -19,16 +18,12 @@ public class ApplicationRunner extends Application {
 
         stage.setTitle("Rangpur Computer Center");
         stage.setResizable(true);
-        //stage.initStyle(StageStyle.TRANSPARENT);
+        stage.initStyle(StageStyle.TRANSPARENT);
 
-        //stage.setFullScreen(true);
+        stage.setFullScreen(true);
         //stage.setMaxWidth(900);
         //stage.setMaxHeight(700);
-        TableView<?> tableView = (TableView<?>) root.lookup("#tableView"); // Replace "#tableView" with the actual fx:id
 
-        if (tableView != null) {
-            tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-        }
         stage.setMinWidth(800);
         stage.setMinHeight(600);
 
