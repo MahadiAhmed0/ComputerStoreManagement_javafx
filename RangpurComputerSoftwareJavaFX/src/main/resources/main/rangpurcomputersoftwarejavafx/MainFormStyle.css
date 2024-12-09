@@ -112,7 +112,6 @@
     -fx-text-fill: white; /* Contrasting text for visibility */
     -fx-font-size: 14px;
     -fx-max-width: Infinity; /* Allow infinite expansion */
-    -fx-pref-width: Auto;   /* Prefer auto width */
 }
 
 .table-view .column-header, .filter {
