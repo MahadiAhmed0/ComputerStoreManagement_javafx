@@ -12,17 +12,17 @@ import java.io.IOException;
 public class ApplicationRunner extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Authentication.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("MainForm.fxml"));
 
         Scene scene = new Scene(root);
 
         stage.setTitle("Rangpur Computer Center");
         stage.setResizable(true);
-        //stage.initStyle(StageStyle.TRANSPARENT);
+        stage.initStyle(StageStyle.TRANSPARENT);
 
-
-        stage.setMaxWidth(900);
-        stage.setMaxHeight(700);
+        stage.setFullScreen(true);
+        //stage.setMaxWidth(900);
+        //stage.setMaxHeight(700);
 
         stage.setMinWidth(800);
         stage.setMinHeight(600);

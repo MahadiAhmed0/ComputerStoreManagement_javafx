@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.rangpurcomputersoftwarejavafx.MainFormController">
    <children>
       <SplitPane dividerPositions="0.2" prefHeight="900.0" prefWidth="1400.0" stylesheets="@MainFormStyle.css">
         <items>
@@ -16,38 +25,38 @@
                <children>
                   <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="280.0" styleClass="ash-color" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button layoutX="44.0" layoutY="313.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Dashboard" AnchorPane.bottomAnchor="547.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
+                        <Button fx:id="dashboardButton" layoutX="44.0" layoutY="313.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Dashboard" AnchorPane.bottomAnchor="547.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
                            <font>
                               <Font name="Roboto Black" size="18.0" />
                            </font>
                         </Button>
-                        <Button layoutX="44.0" layoutY="383.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Inventory" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
+                        <Button fx:id="inventoryButton" layoutX="44.0" layoutY="383.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Inventory" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
                            <font>
                               <Font name="Roboto Black" size="18.0" />
                            </font>
                         </Button>
-                        <Button layoutX="44.0" layoutY="453.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Sell" AnchorPane.bottomAnchor="407.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
+                        <Button fx:id="manageInventoryButton" layoutX="44.0" layoutY="453.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Manage Inventory" AnchorPane.bottomAnchor="407.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
                            <font>
                               <Font name="Roboto Black" size="18.0" />
                            </font>
                         </Button>
-                        <Button layoutX="44.0" layoutY="523.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Sale History" AnchorPane.bottomAnchor="337.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
+                        <Button fx:id="sellButton" layoutX="44.0" layoutY="523.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Sell" AnchorPane.bottomAnchor="337.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
                            <font>
                               <Font name="Roboto Black" size="18.0" />
                            </font>
                         </Button>
-                        <Button layoutX="44.0" layoutY="593.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Low Stock" AnchorPane.bottomAnchor="267.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
+                        <Button fx:id="saleHistoryButton" layoutX="44.0" layoutY="593.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Sale History" AnchorPane.bottomAnchor="267.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
                            <font>
                               <Font name="Roboto Black" size="18.0" />
                            </font>
                         </Button>
-                        <Button layoutX="100.0" layoutY="820.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Logout" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="80.0">
+                        <Button fx:id="logoutButton" layoutX="100.0" layoutY="820.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Logout" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="80.0">
                            <font>
                               <Font name="Roboto Black" size="14.0" />
                            </font>
                         </Button>
                         <AnchorPane layoutY="30.0" prefHeight="280.0" prefWidth="280.0" styleClass="logo" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="590.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
-                        <Button layoutX="44.0" layoutY="663.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Optional" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
+                        <Button fx:id="customerInfoButtobn" layoutX="44.0" layoutY="663.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Customer Info" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="36.0">
                            <font>
                               <Font name="Roboto Black" size="18.0" />
                            </font>
@@ -57,9 +66,28 @@
                   <AnchorPane prefHeight="30.0" prefWidth="280.0" styleClass="blue-color" stylesheets="@MainFormStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="white-form" stylesheets="@MainFormStyle.css">
                <children>
-                  <AnchorPane prefHeight="898.0" prefWidth="976.0" styleClass="white-form" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane prefHeight="30.0" prefWidth="1120.0" styleClass="blue-color" stylesheets="@MainFormStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button fx:id="CrossButton" layoutX="1093.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="X" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="4.0">
+                           <font>
+                              <Font name="Roboto Black" size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="MaximizeButton" layoutX="1061.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="M" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="34.0">
+                           <font>
+                              <Font name="Roboto Black" size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="MinimizeButton" layoutX="1033.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="_" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="66.0">
+                           <font>
+                              <Font name="Roboto Black" size="10.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="Dashboard" prefHeight="898.0" prefWidth="1120.0" styleClass="transparent" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <AnchorPane layoutX="30.0" layoutY="60.0" prefHeight="300.0" prefWidth="1060.0" stylesheets="@MainFormStyle.css" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
                            <children>
@@ -72,30 +100,99 @@
                                                 <String fx:value="gradient" />
                                                 <String fx:value="radius" />
                                              </styleClass>
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="18.0" layoutY="152.0" size="70 em" />
+                                                <Label layoutX="60.0" layoutY="200.0" text="Customer Count">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="customerCount" alignment="CENTER_RIGHT" layoutX="27.0" layoutY="25.0" prefHeight="29.0" prefWidth="187.0" text="0">
+                                                   <font>
+                                                      <Font name="Roboto" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
                                           </AnchorPane>
                                           <AnchorPane layoutX="310.0" layoutY="25.0" prefHeight="250.0" prefWidth="250.0" stylesheets="@MainFormStyle.css">
                                              <styleClass>
                                                 <String fx:value="gradient" />
                                                 <String fx:value="radius" />
                                              </styleClass>
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="MONEY" layoutX="18.0" layoutY="152.0" size="70 em" />
+                                                <Label layoutX="60.0" layoutY="200.0" text="Total Income">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="totalIncomeCount" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="25.0" prefHeight="29.0" prefWidth="200.0" text="0">
+                                                   <font>
+                                                      <Font name="Roboto" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
                                           </AnchorPane>
                                           <AnchorPane layoutX="590.0" layoutY="25.0" prefHeight="250.0" prefWidth="250.0" stylesheets="@MainFormStyle.css">
                                              <styleClass>
                                                 <String fx:value="gradient" />
                                                 <String fx:value="radius" />
                                              </styleClass>
+                                             <children>
+                                                <Label layoutX="60.0" layoutY="200.0" text="Daily Income">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dailyIncomeCount" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="25.0" prefHeight="29.0" prefWidth="200.0" text="0">
+                                                   <font>
+                                                      <Font name="Roboto" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="32.0" layoutY="82.0" text="৳" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="72.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
                                           </AnchorPane>
                                           <AnchorPane layoutX="870.0" layoutY="25.0" prefHeight="250.0" prefWidth="250.0" stylesheets="@MainFormStyle.css">
                                              <styleClass>
                                                 <String fx:value="gradient" />
                                                 <String fx:value="radius" />
                                              </styleClass>
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="SHOPPING_CART" layoutX="18.0" layoutY="152.0" size="70 em" />
+                                                <Label layoutX="60.0" layoutY="200.0" text="Today's Sale">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dailySaleCount" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="25.0" prefHeight="29.0" prefWidth="200.0" text="0">
+                                                   <font>
+                                                      <Font name="Roboto" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
                                           </AnchorPane>
                                           <AnchorPane layoutX="1150.0" layoutY="25.0" prefHeight="250.0" prefWidth="250.0" stylesheets="@MainFormStyle.css">
                                              <styleClass>
                                                 <String fx:value="gradient" />
                                                 <String fx:value="radius" />
                                              </styleClass>
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="WARNING" layoutX="18.0" layoutY="152.0" size="70 em" />
+                                                <Label layoutX="60.0" layoutY="200.0" text="Low Stock Count">
+                                                   <font>
+                                                      <Font name="Roboto Black" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lowStockCount" alignment="CENTER_RIGHT" layoutX="24.0" layoutY="25.0" prefHeight="29.0" prefWidth="200.0" text="0">
+                                                   <font>
+                                                      <Font name="Roboto" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
                                           </AnchorPane>
                                        </children>
                                     </AnchorPane>
@@ -108,24 +205,601 @@
                               <String fx:value="radius-fixed-corner" />
                            </styleClass>
                         </AnchorPane>
+                        <AnchorPane layoutX="30.0" layoutY="400.0" prefHeight="470.0" prefWidth="1060.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="400.0">
+                           <children>
+                              <TableView fx:id="lowStock_table" prefHeight="780.0" prefWidth="1050.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="ID" />
+                                    <TableColumn prefWidth="150.0" text="Brand Name" />
+                                    <TableColumn prefWidth="250.0" text="Product Name" />
+                                    <TableColumn prefWidth="150.0" text="Category" />
+                                    <TableColumn prefWidth="150.0" text="Sub Category" />
+                                    <TableColumn prefWidth="150.0" text="Price" />
+                                    <TableColumn prefWidth="138.3333740234375" text="Quantity" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="450.0" text="Low Quantity Products " AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="444.0">
+                                 <font>
+                                    <Font name="Impact" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                        <Label layoutX="450.0" layoutY="5.0" text="Dashboard" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="589.0">
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
-                  <AnchorPane prefHeight="30.0" prefWidth="1120.0" styleClass="blue-color" stylesheets="@MainFormStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <AnchorPane fx:id="Inventory" layoutY="30.0" prefHeight="871.0" prefWidth="1120.0" styleClass="transparent" stylesheets="@MainFormStyle.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button layoutX="1093.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="X" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="4.0">
+                        <Label layoutX="450.0" layoutY="5.0" text="Inventory Info" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="567.0">
                            <font>
-                              <Font name="Roboto Black" size="10.0" />
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="inventory_table" prefHeight="780.0" prefWidth="1050.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="90.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                            <TableColumn prefWidth="75.0" text="ID" />
+                            <TableColumn prefWidth="150.0" text="Brand Name" />
+                              <TableColumn prefWidth="250.0" text="Product Name" />
+                              <TableColumn prefWidth="150.0" text="Category" />
+                              <TableColumn prefWidth="150.0" text="Sub Category" />
+                              <TableColumn prefWidth="150.0" text="Price" />
+                              <TableColumn prefWidth="138.3333740234375" text="Quantity" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="inventorysearchBar" layoutX="30.0" layoutY="45.0" prefHeight="30.0" prefWidth="915.0" promptText="Search ....." styleClass="textfield" stylesheets="@MainFormStyle.css" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="177.0" />
+                        <Button fx:id="inventorySearchButton" layoutX="960.0" layoutY="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" styleClass="border-button" stylesheets="@MainFormStyle.css" text="Search" AnchorPane.rightAnchor="30.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="manageInventory" layoutX="260.0" layoutY="160.0" prefHeight="900.0" prefWidth="1120.0" stylesheets="@MainFormStyle.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="450.0" layoutY="5.0" text="Manage Inventory" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="537.0">
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </Label>
+                        <SplitPane dividerPositions="0.15" prefHeight="870.0" prefWidth="1120.0" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="859.0" prefWidth="168.0" styleClass="transparent" stylesheets="@MainFormStyle.css">
+                                 <children>
+                                    <VBox maxHeight="1080.0" maxWidth="230.4" prefHeight="871.0" prefWidth="168.0" styleClass="transparent" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                       <children>
+                                          <Button fx:id="addButton" maxHeight="350.0" maxWidth="400.0" mnemonicParsing="false" prefHeight="290.0" prefWidth="168.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="ADD" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="Impact" size="36.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="updateButton" maxHeight="350.0" maxWidth="400.0" mnemonicParsing="false" prefHeight="290.0" prefWidth="168.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="UPDATE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="Impact" size="36.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="editButton" maxHeight="350.0" maxWidth="400.0" mnemonicParsing="false" prefHeight="290.0" prefWidth="168.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="Edit" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="Impact" size="36.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="deleteButton" maxHeight="350.0" maxWidth="400.0" mnemonicParsing="false" prefHeight="290.0" prefWidth="168.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="DELETE">
+                                             <font>
+                                                <Font name="Impact" size="36.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="transparent" stylesheets="@MainFormStyle.css">
+                                 <children>
+                                    <AnchorPane fx:id="update" layoutX="30.0" layoutY="30.0" prefHeight="810.0" prefWidth="892.0" stylesheets="@MainFormStyle.css" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+                                       <styleClass>
+                                          <String fx:value="white-form" />
+                                          <String fx:value="radius-fixed-corner" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <HBox layoutX="30.0" layoutY="100.0" prefHeight="400.0" prefWidth="832.0" AnchorPane.bottomAnchor="310.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="100.0">
+                                             <children>
+                                                <VBox prefHeight="345.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label text="Product ID :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Price :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Quantitiy :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="345.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <TextField fx:id="updateProductID" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets top="15.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="updatePrice" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets top="15.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="updateQuantity" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets top="15.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <Separator layoutX="33.0" layoutY="400.0" prefWidth="832.0" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="407.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="27.0" />
+                                          <Button fx:id="update_UpdateButton" layoutX="129.0" layoutY="550.0" maxHeight="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Update" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="563.0">
+                                             <font>
+                                                <Font name="Roboto Bold" size="24.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="update_ClearTextButton" layoutX="566.0" layoutY="550.0" maxHeight="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Clear Text" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="566.0" AnchorPane.rightAnchor="126.0">
+                                             <font>
+                                                <Font name="Roboto Bold" size="24.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="add" layoutX="30.0" layoutY="30.0" prefHeight="810.0" prefWidth="892.0" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+                                       <styleClass>
+                                          <String fx:value="white-form" />
+                                          <String fx:value="radius-fixed-corner" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <HBox layoutX="30.0" layoutY="100.0" prefHeight="400.0" prefWidth="832.0" AnchorPane.bottomAnchor="310.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="100.0">
+                                             <children>
+                                                <VBox prefHeight="345.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label text="Brand Name :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Product Name :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Price :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Quantitity :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Category :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Sub Category :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="345.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <TextField fx:id="addBrandName" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets top="15.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="addProductName" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets top="15.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="addPrice" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets top="15.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="addQuantity" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="20.0" />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets top="15.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="addCategory" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="20.0" />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets top="15.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                      <TextField fx:id="addSubCategory" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="20.0" />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets top="15.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <Separator layoutX="33.0" layoutY="550.0" prefWidth="832.0" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="257.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="27.0" />
+                                          <Button fx:id="add_AddButton" layoutX="129.0" layoutY="650.0" maxHeight="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Add Product" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="563.0">
+                                             <font>
+                                                <Font name="Roboto Bold" size="24.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="add_ClearTextButton" layoutX="566.0" layoutY="650.0" maxHeight="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Clear Text" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="566.0" AnchorPane.rightAnchor="126.0">
+                                             <font>
+                                                <Font name="Roboto Bold" size="24.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="delete" layoutX="30.0" layoutY="30.0" prefHeight="810.0" prefWidth="892.0" stylesheets="@MainFormStyle.css" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+                                       <styleClass>
+                                          <String fx:value="white-form" />
+                                          <String fx:value="radius-fixed-corner" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <HBox layoutX="30.0" layoutY="100.0" prefHeight="400.0" prefWidth="832.0" AnchorPane.bottomAnchor="310.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="100.0">
+                                             <children>
+                                                <VBox prefHeight="345.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label text="Product ID :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="100.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="345.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <TextField fx:id="deleteProductID" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="105.0" />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets top="15.0" />
+                                                         </padding>
+                                                      </TextField>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <Separator layoutX="33.0" layoutY="400.0" prefWidth="832.0" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="407.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="27.0" />
+                                          <Button fx:id="delete_DeleteButton" layoutX="129.0" layoutY="550.0" maxHeight="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Delete" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="563.0">
+                                             <font>
+                                                <Font name="Roboto Bold" size="24.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="delete_ClearTextButton" layoutX="566.0" layoutY="550.0" maxHeight="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Clear Text" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="566.0" AnchorPane.rightAnchor="126.0">
+                                             <font>
+                                                <Font name="Roboto Bold" size="24.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="edit" layoutX="30.0" layoutY="30.0" prefHeight="810.0" prefWidth="892.0" stylesheets="@MainFormStyle.css" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+                                       <styleClass>
+                                          <String fx:value="white-form" />
+                                          <String fx:value="radius-fixed-corner" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <HBox layoutX="30.0" layoutY="100.0" prefHeight="400.0" prefWidth="832.0" AnchorPane.bottomAnchor="310.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="100.0">
+                                             <children>
+                                                <VBox prefHeight="345.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label text="Product ID :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Brand Name :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Product Name :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Price :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Quantitity :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Category :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label text="Sub Category :">
+                                                         <font>
+                                                            <Font name="Roboto" size="36.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="50.0" top="15.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="345.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <TextField fx:id="editProductID" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="editBrandName" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="editProductName" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="editPrice" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="20.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="editQuantity" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="20.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="editCategory" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets top="20.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="editSubCategory" prefHeight="36.0" styleClass="textfield" stylesheets="@MainFormStyle.css">
+                                                         <VBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <Separator layoutX="33.0" layoutY="550.0" prefWidth="832.0" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="257.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="27.0" />
+                                          <Button fx:id="edit_EditButton" layoutX="129.0" layoutY="650.0" maxHeight="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Edit Product" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="563.0">
+                                             <font>
+                                                <Font name="Roboto Bold" size="24.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="edit_ClearTextButton" layoutX="566.0" layoutY="650.0" maxHeight="60.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Clear Text" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="566.0" AnchorPane.rightAnchor="126.0">
+                                             <font>
+                                                <Font name="Roboto Bold" size="24.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                           <styleClass>
+                              <String fx:value="split-pane" />
+                              <String fx:value="split-pane-divider" />
+                           </styleClass>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="customerInfo" prefHeight="901.0" prefWidth="1120.0" styleClass="transparent" stylesheets="@MainFormStyle.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="customerTable" layoutX="30.0" layoutY="90.0" prefHeight="783.0" prefWidth="1061.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="90.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="ID" />
+                              <TableColumn prefWidth="402.66668701171875" text="Name" />
+                              <TableColumn prefWidth="346.33331298828125" text="Phone Number" />
+                              <TableColumn prefWidth="179.0" text="ID Creation Date" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="customerSearchBar" layoutX="30.0" layoutY="45.0" prefHeight="30.0" prefWidth="915.0" promptText="Search ....." styleClass="textfield" stylesheets="@MainFormStyle.css" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="177.0" />
+                        <Button fx:id="customerSearchButton" layoutX="960.0" layoutY="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" styleClass="border-button" stylesheets="@MainFormStyle.css" text="Search" AnchorPane.rightAnchor="30.0" />
+                        <Label layoutX="450.0" layoutY="5.0" text="Customer Info" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="565.0">
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="SaleHistory" prefHeight="901.0" prefWidth="1120.0" styleClass="transparent" stylesheets="@MainFormStyle.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="saleHistoryTable" prefHeight="780.0" prefWidth="1050.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="121.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn prefWidth="181.66665649414062" text="Sale Date" />
+                              <TableColumn prefWidth="162.33331298828125" text="Sale ID" />
+                              <TableColumn prefWidth="182.66668701171875" text="Client ID" />
+                              <TableColumn prefWidth="274.66668701171875" text="Product IDs" />
+                              <TableColumn prefWidth="108.333251953125" text="Discount (%)" />
+                              <TableColumn prefWidth="133.6666259765625" text="Total Amount" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="saleHistoryBar" layoutX="30.0" layoutY="45.0" prefHeight="30.0" prefWidth="915.0" promptText="Search ....." styleClass="textfield" stylesheets="@MainFormStyle.css" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="177.0" />
+                        <Button fx:id="saleHistorySearchButton" layoutX="960.0" layoutY="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" styleClass="border-button" stylesheets="@MainFormStyle.css" text="Search" AnchorPane.rightAnchor="30.0" />
+                        <Label layoutX="450.0" layoutY="5.0" text="Sale History" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="581.0">
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="SellingPage" layoutX="338.0" layoutY="252.0" prefHeight="900.0" prefWidth="1120.0" styleClass="transparent" stylesheets="@MainFormStyle.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="450.0" layoutY="5.0" text="Selling Page" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="578.0">
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="650.0" text="Product ID :" AnchorPane.bottomAnchor="227.0" AnchorPane.leftAnchor="30.0">
+                           <font>
+                              <Font name="Roboto" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="sellProductID" layoutX="30.0" layoutY="680.0" prefHeight="30.0" prefWidth="150.0" styleClass="textfield" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="190.0" AnchorPane.leftAnchor="30.0" />
+                        <Label layoutX="414.0" layoutY="650.0" prefHeight="23.0" prefWidth="222.0" text="Discount for this product :" AnchorPane.bottomAnchor="227.0" AnchorPane.leftAnchor="415.0">
+                           <font>
+                              <Font name="Roboto" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="sellDiscount" layoutX="415.0" layoutY="680.0" maxWidth="150.0" prefHeight="30.0" prefWidth="150.0" styleClass="textfield" stylesheets="@MainFormStyle.css" AnchorPane.bottomAnchor="190.0" AnchorPane.leftAnchor="415.0" />
+                        <TableView fx:id="sellTable" prefHeight="780.0" prefWidth="1050.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Product ID" />
+                              <TableColumn prefWidth="369.0" text="Product Name" />
+                              <TableColumn prefWidth="108.0" text="Quantity" />
+                              <TableColumn prefWidth="154.66668701171875" text="Price" />
+                              <TableColumn prefWidth="185.3333740234375" text="Discount (%)" />
+                              <TableColumn prefWidth="150.6666259765625" text="Total Amount" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="sellProceedButton" layoutX="420.0" layoutY="780.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" styleClass="normal-btn" stylesheets="@MainFormStyle.css" text="Proceed" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="415.0" AnchorPane.rightAnchor="550.0">
+                           <font>
+                              <Font name="Impact" size="24.0" />
                            </font>
                         </Button>
-                        <Button layoutX="1061.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="M" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="34.0">
-                           <font>
-                              <Font name="Roboto Black" size="10.0" />
-                           </font>
-                        </Button>
-                        <Button layoutX="1033.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="titlebar-button" stylesheets="@MainFormStyle.css" text="_" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="66.0">
-                           <font>
-                              <Font name="Roboto Black" size="10.0" />
-                           </font>
-                        </Button>
+                        <VBox layoutX="940.0" layoutY="640.0" prefHeight="60.0" prefWidth="150.0" AnchorPane.bottomAnchor="179.0" AnchorPane.rightAnchor="30.0">
+                           <children>
+                              <Button fx:id="sellAddButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" styleClass="border-button" stylesheets="@MainFormStyle.css" text="AddProduct" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="sellRemoveButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" styleClass="border-button" stylesheets="@MainFormStyle.css" text="RemoveProduct" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="sellClearButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" styleClass="border-button" stylesheets="@MainFormStyle.css" text="Clear All" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
                </children>

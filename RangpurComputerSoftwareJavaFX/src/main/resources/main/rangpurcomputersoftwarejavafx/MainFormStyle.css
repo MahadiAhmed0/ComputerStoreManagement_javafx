@@ -20,8 +20,16 @@
     -fx-cursor: hand;
     -fx-text-fill: #fff;
 }
+.normal-btn:hover {
+    -fx-background-color: linear-gradient(to left, #4169e1, #89CFF0);
+    -fx-text-fill: #ffffff;
+}
 .ash-color{
     -fx-background-color: #2b2b2b;
+}
+
+.light-ash-color{
+    -fx-background-color: #b9b8b8;
 }
 
 .logo{
@@ -61,7 +69,7 @@
 }
 
 .shadow{
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 1), 15, 0, 0, 0);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, .5), 15, 0, 0, 0);
 }
 
 .radius-fixed-corner{
@@ -83,4 +91,72 @@
     -fx-text-fill: white;
 }
 
+.transparent{
+    -fx-background-color: transparent;
+}
+
+.table-view {
+    -fx-background-color: #ffffff; /* White background for visibility */
+    -fx-padding: 5;
+    -fx-border-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
+    -fx-border-radius: 0 0 10px 10px;
+    -fx-border-width: 2px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-text-fill: white; /* Contrasting text for visibility */
+    -fx-font-size: 14px;
+    -fx-max-width: Infinity; /* Allow infinite expansion */
+}
+
+.table-view .column-header, .filter {
+    -fx-size: 30px; /* Adjust height of headers */
+}
+
+
+
+.textfield {
+    -fx-background-color: white; /* White background */
+    -fx-border-color: linear-gradient(to bottom right, #4169e1, #89CFF0); /* Gradient border color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-text-fill: black; /* Set text color to black for better readability */
+}
+
+.textfield:focused {
+    -fx-border-width: 2px; /* Make border thicker when focused */
+    -fx-border-color: #4169e1; /* Focused border color (solid blue) */
+    -fx-text-fill: black; /* Ensure text color stays black while focused */
+}
+
+.border-button {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to right, #89CFF0, #4169e1);
+    -fx-border-width: 1px;
+    -fx-text-fill: black;
+}
+
+.border-button:hover {
+    -fx-background-color: linear-gradient(to right, #89CFF0, #4169e1);
+    -fx-text-fill: white;
+}
+
+.pressed-button.active {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: white;
+}
+
+.textfield {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #4169e1, #89CFF0);
+    -fx-border-width: 1px;
+}
+
+.textfield:focused {
+    -fx-border-width: 2px;
+}
 
